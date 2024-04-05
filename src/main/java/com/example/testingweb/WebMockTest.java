@@ -24,8 +24,8 @@ class WebMockTest {
 
     @Test
     void doubleNumberShouldReturnDoubleFromService() throws Exception {
-        int numberToDouble = 5;
-        int expectedDouble = 10;
+        int numberToDouble = 2;
+        int expectedDouble = 4;
         when(service.doubleNumber(numberToDouble)).thenReturn(expectedDouble);
         this.mockMvc.perform(get("/double").param("number", String.valueOf(numberToDouble)))
                 .andDo(print())
